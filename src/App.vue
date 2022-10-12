@@ -1,11 +1,12 @@
 <template>
     <div class="app">
-        <Tweet />
+        <Tweet v-for="tweet in tweets" :tweet="tweet"/>
     </div>
 </template>
   
 <script setup>
 import Tweet from './components/Tweet.vue';
+
 const tweets = [
     {
         user: {
